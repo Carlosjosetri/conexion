@@ -51,7 +51,7 @@ public class FiltroDao implements metodos<Filtro>{
     }
 
     @Override
-    public boolean delete(Filtro key) {
+    public boolean delete(Object key) {
         PreparedStatement ps;
         try{
             ps=con.getCnx().prepareStatement(SQL_DELETE);
@@ -77,7 +77,7 @@ public class FiltroDao implements metodos<Filtro>{
             ps=con.getCnx().prepareStatement(SQL_UPDATE);
             ps.setString(1, c.getMarca());
             ps.setInt(2, c.getStock());
-            ps.setBoolean(3, c.getExixtencia());
+            ps.setBoolean(3, c.getExistencia());
             ps.setString(4, c.getCodigo());
             if(ps.executeUpdate()>0){
                 return true;
