@@ -141,7 +141,7 @@ public class Consulta extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 FiltroDao fd=new FiltroDao();
-                Filtro f=new Filtro(codigo.getText(), marca.setSelectedItem().toString,Integer.parseInt(stock.getText()),true);
+               
             }
         });
     }
